@@ -22,10 +22,11 @@ jobs:
 
 
           ssh -i ~/.ssh/id_rsa ${{secrets.EC2_USER}}@${{secrets.KNOWN_HOSTS}} "
-          cd ~/draw &&
-          git pull origin main && 
-          pnpm install &&
-          pm2 restart monorepo-dev"
+           cd ~/draw &&
+           git pull origin main && 
+           pnpm install &&
+           pm2 restart monorepo-dev
+          "
 
            
 

@@ -20,7 +20,7 @@ jobs:
           chmod 600 ~/.ssh/id_rsa
           echo "${{ secrets.KNOWN_HOSTS }}" > ~/.ssh/known_hosts
           ssh -i ~/.ssh/id_rsa ${{secrets.ec2_user}}@${{secrets.KNOWN_HOSTS}}
-          cd draw 
+          cd ~/draw 
           git pull origin main
           pnpm i
           pm2 start monorepo-dev
